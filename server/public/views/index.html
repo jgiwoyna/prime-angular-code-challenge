@@ -2,9 +2,19 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="/styles/bootstrap.min.css"/>
+    <script type="text/javascript" src="/vendor/angular.min.js"></script>
+    <script type="text/javascript" src="/vendor/angular-route.min.js"></script>
+    <script type="text/javascript" src="/scripts/client.js"></script>
     <title>Department of Emerging Superhero Knowledge</title>
   </head>
-  <body>
-    <h1>Department of Emerging Superhero Knowledge</h1>
+  <body ng-app="myApp">
+
+    <header ng-include="'/views/templates/header.html'" class="jumbotron text-center"></header>
+
+    <div ng-include="'/views/templates/nav.html'"></div>
+
+    <main ng-view></main>
+
   </body>
 </html>

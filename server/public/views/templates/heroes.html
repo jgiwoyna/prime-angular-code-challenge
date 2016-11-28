@@ -1,0 +1,29 @@
+<h2>Add a new super hero!</h2>
+<form id="hero-form">
+  <div class="form-group">
+    <label for="persona">Persona:</label>
+    <input type="text" ng-model="hc.newHero.persona" name="persona" class="form-control" />
+  </div>
+
+  <div class="form-group">
+    <label for="alias">Alias:</label>
+    <input type="text" ng-model="hc.newHero.alias" name="alias" class="form-control" />
+  </div>
+
+  <div class="form-group">
+    <label for="power_id">Power ID:</label>
+    <!-- <select class="form-control" ng-model="hc.heroes" ng-options="heroes.power_id for heroes in hc.heroes"></select> -->
+    <input type="text" ng-model="hc.newHero.power_id" name="power_id"  class="form-control"/>
+  </div>
+  <button class="btn btn-primary" ng-click="hc.addHero(hc.newHero)">Add Hero!</button>
+</form>
+
+<div id="heroes">
+   <div ng-repeat="hero in hc.heroes">
+     <p>{{hero.persona}}</p>
+     <p>{{hero.alias}}</p>
+     <p>{{hero.power_id}}</p>
+     <!-- <p>Active: <button ng-click="ec.toggleActiveEmployee(employee.id)">{{employee.active}}</button></p> -->
+     <button class="btn btn-primary" ng-click="hc.removeHero(hero.id)">Remove Hero!</button>
+   </div>
+ </div>
