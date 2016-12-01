@@ -1,1 +1,10 @@
 
+<div id="heroes">
+   <div ng-repeat="hero in pc.heroes">
+     <p>{{hero.persona}}</p>
+     <p>{{hero.alias}}</p>
+     <p>{{hero.power_id}}</p>
+     <!-- <p>Active: <button ng-click="ec.toggleActiveEmployee(employee.id)">{{employee.active}}</button></p> -->
+     <button class="btn btn-primary" ng-click="pc.removeHero(hero.id)">Remove Hero!</button>
+   </div>
+ </div>
